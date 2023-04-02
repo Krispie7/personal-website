@@ -17,8 +17,20 @@ body{
     width:100%;
     height:100vh;
     display: flex;
+    z-index: 3;
+    transition: 2.5s ease;
+}
+
+#fadeInBackground{
+    opacity:1;
+    background-color:black;
+    position:absolute;
+    width:100%;
+    height:100vh;
+    display: flex;
     z-index: 2;
-    transition: 1s ease;
+    transition: 15s ease;
+    transition-delay: 3s;
 }
 
 #start{
