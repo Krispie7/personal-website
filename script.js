@@ -1,6 +1,6 @@
 const initBackground = document.getElementById("initBackground")
 const fadeInBackground = document.getElementById("fadeInBackground")
-const startButton = document.getElementById("start")
+const startButton = document.getElementById("startButton")
 const content=document.getElementById("content")
 
 

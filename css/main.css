@@ -10,6 +10,18 @@
 body{
     background-color:#000200;
 }
+
+/* Hide scroll bars */
+
+body::-webkit-scrollbar, html::-webkit-scrollbar{
+    display:none;
+}
+
+body, html{
+    -ms-overflow-style:none;
+    scrollbar-width:none;
+}
+
 /* init page */
 #initBackground{
     background-color:white;
@@ -33,13 +45,13 @@ body{
     transition-delay: 3s;
 }
 
-#start{
+#startButton{
     position:absolute;
     top:50%;
     left:50%;
     transform: translate(-50%, -50%);
     z-index:3;
-    transition:1500ms ease;
+    transition:500ms ease;
 }
 
 /* STARS */
@@ -135,8 +147,8 @@ body{
 }
 
 body, html{
-    scroll-snap-type: mandatory;
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: proximity;
+    scroll-snap-type: y proximity;
     scroll-snap-points-y:repeat(100vh);
     height:100vh;
 }
