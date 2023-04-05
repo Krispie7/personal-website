@@ -159,8 +159,12 @@ body, html{
     height:100vh;
 }
 
-h2{
+h2, h1{
     color:white;
+}
+
+h1{
+    font-size:5rem;
 }
 
 .scroll{
@@ -177,12 +181,40 @@ h2{
 
 /* Page 1 */
 
+#introGrid{
+    width:100vw;
+    height:100vh;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows:1fr 1fr 1fr;
+    grid-template-areas:
+    "header header header"
+    "image image info"
+    "image image info";
+    align-items:center;
+}
+
+#profileContainer{
+    grid-area:header;
+    display:flex;
+    justify-self:flex-end;
+    margin-right:15vw;
+}
+
+.name{
+    margin-right:5vw;
+}
+#solarSystem{
+    grid-area:image;
+}
+
+#info{
+    grid-area:info;
+}
+
 #portaitImage{
     background: url(./../colorful-photo.jpg);
     border-radius:50%;
-    position:absolute;
-    top:10%;
-    right:10%;
     height:15rem;
     width:15rem;
     background-size: cover;
