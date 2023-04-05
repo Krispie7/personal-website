@@ -221,3 +221,28 @@ h1{
     background-position: center;
 }
 
+/* Page 2 */
+
+#storyGrid{
+    width:100vw;
+    height:100vh;
+    display:grid;
+    grid-template-columns:1fr 2fr;
+    grid-template-rows:1fr 3fr;
+    grid-template-areas: 
+    "games text"
+    "games image";
+}
+
+#games{
+    grid-area:games;
+}
+
+#story{
+    grid-area:text;
+    font-size:3rem;
+}
+
+#nebula{
+    grid-area:image;
+}
