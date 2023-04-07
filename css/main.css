@@ -80,42 +80,42 @@ body, html{
 
 .star.star1{
     animation-delay:0s;
-    background: url(./../star1.png);
+    background: url(./../images/star1.png);
 }
 
 .star.star2{
     animation-delay:-1s;
-    background: url(./../star2.png);
+    background: url(./../images/star2.png);
 }
 
 .star.star3{
     animation-delay:-2s;
-    background: url(./../star3.png);
+    background: url(./../images/star3.png);
 }
 
 .star.star4{
     animation-delay:-3s;
-    background: url(./../star4.png);
+    background: url(./../images/star4.png);
 }
 
 .star.star5{
     animation-delay: -4s;
-    background: url(./../star5.png);
+    background: url(./../images/star5.png);
 }
 
 .star.star6{
     animation-delay:-5s;
-    background: url(./../star6.png);
+    background: url(./../images/star6.png);
 }
 
 .star.star7{
     animation-delay:-6s;
-    background: url(./../star7.png);
+    background: url(./../images/star7.png);
 }
 
 .star.star8{
     animation-delay:-7s;
-    background: url(./../star8.png);
+    background: url(./../images/star8.png);
 }
 
 @keyframes animate{
@@ -213,7 +213,7 @@ h1{
 }
 
 #portaitImage{
-    background: url(./../colorful-photo.jpg);
+    background: url(./../images/colorful-photo.jpg);
     border-radius:50%;
     height:15rem;
     width:15rem;
