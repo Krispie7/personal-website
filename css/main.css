@@ -41,8 +41,7 @@ body, html{
     height:100vh;
     display: flex;
     z-index: 2;
-    transition: 15s ease;
-    transition-delay: 3s;
+    transition: opacity 15s 3s;
 }
 
 #startButton{
@@ -140,7 +139,7 @@ body, html{
 
 #overlayDiv{
     position:absolute;
-    background:linear-gradient(0deg, #000000 2.5%,  #00000000 97.5%);
+    background:linear-gradient(0deg, #010400 5%,  #00000000 95%);
     width:100%;
     height:100%;
     z-index: 1;
@@ -181,6 +180,10 @@ h1{
 
 /* Page 1 */
 
+#page1{
+    background:#010400;
+}
+
 #introGrid{
     width:100vw;
     height:100vh;
@@ -192,6 +195,7 @@ h1{
     "image image info"
     "image image info";
     align-items:center;
+    grid-gap:1rem;
 }
 
 #profileContainer{
@@ -221,7 +225,20 @@ h1{
     background-position: center;
 }
 
+#solarSystem{
+    background:url(./../images/final-galaxy.gif);
+    width:100%;
+    height:100%;
+    background-position:center;
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+
 /* Page 2 */
+
+#page2{
+    background-color:#161211;
+}
 
 #storyGrid{
     width:100vw;
@@ -245,4 +262,8 @@ h1{
 
 #nebula{
     grid-area:image;
+    background:url(./../images/final-star.gif);
+    background-position:center;
+    background-size:contain;
+    background-repeat: no-repeat;
 }

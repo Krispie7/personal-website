@@ -9,5 +9,6 @@ function ooga(){
     startButton.style.scale="0";
     content.style.display="block"
     fadeInBackground.style.opacity="0"
+    fadeInBackground.style.height="400vh"
     return
 }
