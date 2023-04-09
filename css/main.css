@@ -244,6 +244,7 @@ h1{
     width:100vw;
     height:100vh;
     display:grid;
+    grid-gap:1rem;
     grid-template-columns:1fr 2fr;
     grid-template-rows:1fr 3fr;
     grid-template-areas: 
@@ -295,4 +296,69 @@ h1{
 /* Page 3 */
 
 #page3{
+}
+
+/* Page 4 */
+
+#contactGrid{
+    margin:.5rem;
+    width:100%;
+    height:100vh;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "contact contact profile"
+    "rocket form form"
+    "rocket form form";
+    justify-items: center;
+    align-items:center;
+}
+
+#contact{
+    grid-area:contact;
+}
+
+#portraitImage2{
+    grid-area:profile;
+    background:url(./../images/profile-picture-with-background.png);
+    background-size:cover;
+    background-position: center;
+    width:250px;
+    height:250px;
+    border-radius:50%;
+    padding:1rem;
+}
+
+#gitHubRocket{
+    height:100%;
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    grid-area:rocket;
+    padding:1rem;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#launchButton{
+    padding:.5rem;
+    background-color:rgb(28, 118, 192);
+    color:white;
+    border-radius: .5rem;;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    width:60%;
+    font-size:2rem;
+}
+
+#rocket{
+    position:relative;
+    width:100%;
+    z-index:1;
+}
+
+#contactForm{
+    grid-area:form;
 }
