@@ -380,15 +380,6 @@ h1{
     0%{
         transform:rotateZ(0deg);
     }
-    25%{
-        transform:scale(.9);
-    }
-    75%{
-        transofmr:scale(1.1);
-    }
-    90%{
-        z-index:-1
-    }
     100%{
         transform:rotateZ(360deg);
     }
@@ -398,10 +389,6 @@ h1{
     0%{
         transform:rotateZ(360deg);
     }
-    10%{
-        z-index: 1;
-    }
-    
     100%{
         transform:rotateZ(0deg);
     }
@@ -409,20 +396,17 @@ h1{
 
 @keyframes hideFirstPlanet{
     0%{
-        z-index:1;
-        transform: scale(.9);
+        z-index:-1;
     }
     25%{
-        z-index:-1
-    }
-    50%{
-        transform:scale(.9);
+        transform: scale(.9)
     }
     75%{
         transform: scale(1.1);
+        z-index:1;
     }
     100%{
-        z-index:1;
+        z-index:-1;
     }
 }
 
@@ -451,7 +435,6 @@ h1{
     50%{
         z-index:-1;
         transform:scale(.9);
-
     }
     100%{
         z-index:1;
