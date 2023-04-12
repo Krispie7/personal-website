@@ -22,6 +22,13 @@ body, html{
     scrollbar-width:none;
 }
 
+.center{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%, -50%);
+}
+
 /* init page */
 #initBackground{
     background-color:white;
@@ -296,7 +303,12 @@ h1{
 /* Page 3 */
 
 #page3{
-    
+    align-items:flex-start;
+    justify-content: flex-start;
+}
+
+#projectList{
+
 }
 
 #projectSolarSystem{
@@ -318,10 +330,7 @@ h1{
     border-radius: 50%;
     background-color: rgb(248, 244, 163);
     box-shadow:0 0 60px rgb(253, 203, 163), 0 0 98px rgb(184, 160, 26);
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%, -50%) scaleX(.2);
+    z-index:0;
 }
 
 #orbit-1{
@@ -353,8 +362,9 @@ h1{
 
 .orbit{
     position:absolute;
-    transform:scaleX(4);
+    transform:scaleX(5);
     border-radius:50%;
+    z-index:1;
 }
 
 .planet{
@@ -374,6 +384,35 @@ h1{
 
 #third-planet{
     background-color:green;
+}
+
+#earth{
+    background-color:teal;
+    transform:translate(-50%, -0%) scaleX(.2);
+}
+
+#mars{
+    background-color:brown;
+}
+
+#jupiter{
+    background-color:rgb(214, 214, 184);
+    transform:translate(-50%, -0%) scaleX(.2);
+}
+
+#uranus{
+    background-color:rgb(122, 122, 204);
+    transform:translate(-50%, -0%) scaleX(.2);
+}
+
+.newPlanet{
+    width:8vw;
+    height:8vw;
+    position:absolute;
+    bottom:0;
+    transform:translate(-50%, -0%) scaleX(.2);
+    z-index:1;
+    border-radius:50%;
 }
 
 .route{
