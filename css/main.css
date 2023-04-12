@@ -299,6 +299,12 @@ h1{
     
 }
 
+#projectSolarSystem{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #planets-container{
     width:150px;
     height:150px;
@@ -307,13 +313,48 @@ h1{
 }
 
 #sun{
-    width:150px;
-    height:150px;
+    width:15vw;
+    height:15vw;
     border-radius: 50%;
     background-color: rgb(248, 244, 163);
-    transform:scaleX(.2);
     box-shadow:0 0 60px rgb(253, 203, 163), 0 0 98px rgb(184, 160, 26);
     position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%) scaleX(.2);
+}
+
+#orbit-1{
+    width:calc(90vw/5);
+    height:calc(90vw/5);
+    background-color:red;
+}
+
+#orbit-2{
+    width:calc(75vw/5);
+    height:calc(75vw/5);
+    background-color:green;
+    
+}
+
+#orbit-3{
+    width:calc(60vw/5);
+    height:calc(60vw/5);
+    background-color:blue;
+    
+}
+
+#orbit-4{
+    width:calc(45vw/5);
+    height:calc(45vw/5);
+    background-color:white;
+    
+}
+
+.orbit{
+    position:absolute;
+    transform:scaleX(4);
+    border-radius:50%;
 }
 
 .planet{
@@ -441,6 +482,12 @@ h1{
         transform:scale(1.1);
     }
 }
+
+/* PSUEDOCODE 
+make 4 different orbits, in them there will be one planet
+give them the class route to make them revolve */
+
+
 
 /* Page 4 */
 
