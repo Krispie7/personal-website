@@ -336,27 +336,23 @@ h1{
 #orbit-1{
     width:calc(90vw/5);
     height:calc(90vw/5);
-    background-color:red;
 }
 
 #orbit-2{
     width:calc(75vw/5);
     height:calc(75vw/5);
-    background-color:green;
     
 }
 
 #orbit-3{
     width:calc(60vw/5);
     height:calc(60vw/5);
-    background-color:blue;
     
 }
 
 #orbit-4{
     width:calc(45vw/5);
     height:calc(45vw/5);
-    background-color:white;
     
 }
 
@@ -364,7 +360,6 @@ h1{
     position:absolute;
     transform:scaleX(5);
     border-radius:50%;
-    z-index:1;
 }
 
 .planet{
@@ -372,18 +367,6 @@ h1{
     height:60px;
     border-radius: 50%;
     transform:scaleX(.2);
-}
-
-#first-planet{
-    background-color:blue;
-}
-
-#second-planet{
-    background-color:red;
-}
-
-#third-planet{
-    background-color:green;
 }
 
 #earth{
@@ -430,12 +413,9 @@ h1{
 }
 
 #second-planet-container{
-    left:85px;
 }
 
 #third-planet-container{
-    left:42.5px;
-    top:100px;
 }
 
 .planet-index{
@@ -444,16 +424,20 @@ h1{
     position:absolute;
 }
 
-#first-planet-index{
-    animation: hideFirstPlanet 12s infinite;
+#orbit-1{
+    animation: indexFirstPlanet 12s infinite;
 }
 
-#second-planet-index{
-    animation: hideSecondPlanet 12s infinite;
+#orbit-2{
+    animation: indexSecondPlanet 12s infinite;
 }
 
-#third-planet-index{
-    animation: hideThirdPlanet 12s infinite;
+#orbit-3{
+    animation: indexThirdPlanet 12s infinite;
+}
+
+#orbit-4{
+    animation: indexFourthPlanet 12s infinite;
 }
 
 @keyframes rotate{
@@ -474,51 +458,75 @@ h1{
     }
 }
 
-@keyframes hideFirstPlanet{
+@keyframes indexFirstPlanet{
+    0%{
+        z-index:-4;
+    }
+    25%{
+        z-index:-4;
+    }
+    60%{
+        z-index:4;
+    }
+    75%{
+        z-index:4;
+    }   
+    100%{
+        z-index:-4;
+    }
+}
+
+@keyframes indexSecondPlanet{
+    0%{
+        z-index:-3;
+    }
+    25%{
+        z-index:-3;
+    }
+    60%{
+        z-index:3;
+    }
+    75%{
+        z-index:3;
+    }   
+    100%{
+        z-index:-3;
+    }
+}
+
+@keyframes indexThirdPlanet{
+    0%{
+        z-index:-2;
+    }
+    25%{
+        z-index:-2;
+    }
+    60%{
+        z-index:2;
+    }
+    75%{
+        z-index:2;
+    }   
+    100%{
+        z-index:-2;
+    }
+}
+
+@keyframes indexFourthPlanet{
     0%{
         z-index:-1;
     }
     25%{
-        transform: scale(.9)
-    }
-    75%{
-        transform: scale(1.1);
-        z-index:1;
-    }
-    100%{
         z-index:-1;
     }
-}
-
-@keyframes hideSecondPlanet{
-    0%{
-        z-index:-1;
-        transform:scale(1);
-    }
-
     60%{
         z-index:1;
-        transform:scale(1.1);
     }
+    75%{
+        z-index:1;
+    }   
     100%{
         z-index:-1;
-        transform:scale(1);
-    }
-}
-
-@keyframes hideThirdPlanet{
-    0%{
-        z-index:1;
-        transform:scale(1.1);
-    }
-
-    50%{
-        z-index:-1;
-        transform:scale(.9);
-    }
-    100%{
-        z-index:1;
-        transform:scale(1.1);
     }
 }
 
