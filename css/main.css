@@ -316,6 +316,8 @@ h1{
 #sun{
     width:15vw;
     height:15vw;
+    margin-top:calc(-15vw/2);
+    margin-left:calc(-15vw/2);
     background-color: rgb(248, 244, 163);
     box-shadow:0 0 60px rgb(253, 203, 163), 0 0 98px rgb(184, 160, 26);
     z-index:0;
