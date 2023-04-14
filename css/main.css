@@ -400,41 +400,44 @@ h1{
     animation-timing-function: linear;
 }
 
-#earth .planet-container, #earth.orbit{
+#earth .planet-container, #earth.orbit, #earth .planet{
     animation-duration: 24s;
 }
 
-#mars .planet-container, #mars.orbit{
+#mars .planet-container, #mars.orbit, #mars .planet{
     animation-duration: 27s;
 }
 
-#jupiter .planet-container, #jupiter.orbit{
+#jupiter .planet-container, #jupiter.orbit, #jupiter .planet{
     animation-duration: 60s;
 }
 
-#uranus .planet-container, #uranus.orbit{
+#uranus .planet-container, #uranus.orbit, #uranus .planet{
     animation-duration: 80s;
 }
 
 #earth .planet{
     background-image:url(./../images/earth.png);
     font-size:calc(100vw/55);
+    animation-name:earth-shadow;
 }
 
 #mars .planet{
     background-image:url(./../images/mars.png);
     font-size:calc(100vw/45);
+    animation-name:mars-shadow;
 }
 
 #jupiter .planet{
     background-image:url(./../images/jupiter.png);
     font-size:calc(100vw/20);
+    animation-name:jupiter-shadow;
 }
 
 #uranus .planet{
     background-image:url(./../images/uranus.png);
     font-size:calc(100vw/25);
-    background-color:transparent;
+    animation-name:uranus-shadow;
 }
 
 .planet{
@@ -450,25 +453,160 @@ h1{
     transform-style: preserve-3d;
     background-size:cover;
     background-repeat: no-repeat;
-    background-color:#202020;
     background-position: center;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transition-timing-function: scale, font-size, 500ms ease;
+
 }
 
 @keyframes orbit{
     0%{
-        transform:rotateZ(0deg);
+        transform:rotateZ(360deg);
     }
     100%{
-        transform:rotateZ(360deg);
+        transform:rotateZ(0deg);
     }
 }
 
 @keyframes correct{
     0%{
-        transform:rotateX(-90deg) rotateY(0deg) rotateZ(0deg);
+        transform:rotateX(-90deg) rotateY(360deg) rotateZ(0deg);
     }
     100%{
-        transform:rotateX(-90deg) rotateY(360deg) rotateZ(0deg);
+        transform:rotateX(-90deg) rotateY(0deg) rotateZ(0deg);
+    }
+}
+
+@keyframes earth-shadow{
+    0% {
+        box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.5);
+        transform: scale(.8);
+        /* TOP */ 
+    }
+    25% {
+        box-shadow: inset 2px 0 1px rgba(0, 0, 0, 0.5);
+        transform: scale(1);
+        /* LEFT */ 
+    }
+    50% {
+        box-shadow: inset 12px -10px 8px rgba(0, 0, 0, 0.5);
+        transform: scale(1.1);
+        /* BOTTOM */ 
+    }
+    50.01% {
+        box-shadow: inset -12px -10px 8px rgba(0, 0, 0, 0.5);
+        transform: scale(1.1);
+        /* BOTTOM */ 
+    }
+    75% {
+        box-shadow: inset -2px 0 1px rgba(0, 0, 0, 0.5);
+        transform: scale(1);
+        /* RIGHT */ 
+    }
+    100%{
+        box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.5);
+        transform: scale(.8);
+        /* TOP */
+    }
+}
+
+@keyframes mars-shadow{
+    0% {
+        box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.5);
+        transform: scale(.8);
+        /* TOP */ 
+    }
+    25% {
+        box-shadow: inset 3px 0 2px rgba(0, 0, 0, 0.5);
+        transform: scale(1);
+        /* LEFT */ 
+    }
+    50% {
+        box-shadow: inset 16px -13px 12px rgba(0, 0, 0, 0.5);
+        transform: scale(1.1);
+        /* BOTTOM */ 
+    }
+    50.01% {
+        box-shadow: inset -16px -13px 12px rgba(0, 0, 0, 0.5);
+        transform: scale(1.1);
+        /* BOTTOM */ 
+    }
+    75% {
+        box-shadow: inset -3px 0 2px rgba(0, 0, 0, 0.5);
+        transform: scale(1);
+        /* RIGHT */ 
+    }
+    100%{
+        box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.5);
+        transform: scale(.8);
+        /* TOP */
+    }
+}
+
+@keyframes jupiter-shadow{
+    0% {
+        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+        transform: scale(.8);
+        /* TOP */ 
+    }
+    25% {
+        box-shadow: inset 15px 0 10px rgba(0, 0, 0, 0.5);
+        transform: scale(1);
+        /* LEFT */ 
+    }
+    50% {
+        box-shadow: inset 70px -60px 50px rgba(0, 0, 0, 0.5);
+        transform: scale(1.1);
+        /* BOTTOM */ 
+    }
+    50.01% {
+        box-shadow: inset -70px -60px 50px rgba(0, 0, 0, 0.5);
+        transform: scale(1.1);
+        /* BOTTOM */ 
+    }
+    75% {
+        box-shadow: inset -15px 0 10px rgba(0, 0, 0, 0.5);
+        transform: scale(1);
+        /* RIGHT */ 
+    }
+    100%{
+        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+        transform: scale(.8);
+        /* TOP */
+    }
+}
+
+@keyframes uranus-shadow{
+    0% {
+        box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.5);
+        transform: scale(.8);
+        /* TOP */ 
+    }
+    25% {
+        box-shadow: inset 14px 0 8px rgba(0, 0, 0, 0.5);
+        transform: scale(1);
+        /* LEFT */ 
+    }
+    50% {
+        box-shadow: inset 54px -43px 39px rgba(0, 0, 0, 0.5);
+        transform: scale(1.1);
+        /* BOTTOM */ 
+    }
+    50.01% {
+        box-shadow: inset -54px -43px 39px rgba(0, 0, 0, 0.5);
+        transform: scale(1.1);
+        /* BOTTOM */ 
+    }
+    75% {
+        box-shadow: inset -14px 0 8px rgba(0, 0, 0, 0.5);
+        transform: scale(1);
+        /* RIGHT */ 
+    }
+    100%{
+        box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.5);
+        transform: scale(.8);
+        /* TOP */
     }
 }
 
