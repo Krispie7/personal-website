@@ -387,48 +387,57 @@ h1{
 }
 
 #earth .planet-container, #earth.orbit{
-    animation-duration: 8s;
+    animation-duration: 24s;
 }
 
 #mars .planet-container, #mars.orbit{
-    animation-duration: 8s;
+    animation-duration: 27s;
 }
 
 #jupiter .planet-container, #jupiter.orbit{
-    animation-duration: 8s;
+    animation-duration: 60s;
 }
 
 #uranus .planet-container, #uranus.orbit{
-    animation-duration: 8s;
+    animation-duration: 80s;
 }
 
 #earth .planet{
-    background-color:teal;
+    background-image:url(./../images/earth.png);
+    font-size:calc(100vw/55);
 }
 
-#mars .planet-container{
-    background-color:brown;
+#mars .planet{
+    background-image:url(./../images/mars.png);
+    font-size:calc(100vw/45);
 }
 
-#jupiter .planet-container{
-    background-color:rgb(214, 214, 184);
+#jupiter .planet{
+    background-image:url(./../images/jupiter.png);
+    font-size:calc(100vw/20);
 }
 
-#uranus .planet-container{
-    background-color:rgb(122, 122, 204);
+#uranus .planet{
+    background-image:url(./../images/uranus.png);
+    font-size:calc(100vw/25);
+    background-color:transparent;
 }
 
 .planet{
     top:50%;
     left:50%;
-    width:8vw;
-    height:8vw;
-    margin-top:-4vw;
-    margin-left:-4vw;
+    width:2em;
+    height:2em;
+    margin-top:-1em;
+    margin-left:-1em;
     position:absolute;
     z-index:1;
     border-radius:50%;
     transform-style: preserve-3d;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-color:#202020;
+    background-position: center;
 }
 
 @keyframes orbit{
