@@ -332,7 +332,7 @@ h1{
     margin-left:calc(-10vw/2);
     background-color: rgb(248, 244, 163);
     box-shadow:0 0 60px rgb(253, 203, 163), 0 0 98px rgb(184, 160, 26);
-    z-index:0;
+    z-index:9990;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -352,6 +352,7 @@ h1{
     animation: orbit;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+    pointer-events: none;
 }
 
 #uranus{
@@ -398,6 +399,7 @@ h1{
     animation-name: correct;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+    pointer-events: none;
 }
 
 #earth .planet-container, #earth.orbit, #earth .planet{
@@ -457,7 +459,7 @@ h1{
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     transition-timing-function: scale, font-size, 500ms ease;
-
+    pointer-events: all;
 }
 
 @keyframes orbit{
