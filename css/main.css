@@ -422,24 +422,32 @@ h1{
     background-image:url(./../images/earth.png);
     font-size:calc(100vw/55);
     animation-name:earth-shadow;
+    --large-size: calc(100vw/25);
+    --normal-size: calc(100vw/55);
 }
 
 #mars .planet{
     background-image:url(./../images/mars.png);
     font-size:calc(100vw/45);
     animation-name:mars-shadow;
+    --large-size: calc(100vw/15);
+    --normal-size:calc(100vw/45);
 }
 
 #jupiter .planet{
     background-image:url(./../images/jupiter.png);
     font-size:calc(100vw/20);
     animation-name:jupiter-shadow;
+    --large-size: calc(100vw/5);
+    --normal-size:calc(100vw/20);
 }
 
 #uranus .planet{
     background-image:url(./../images/uranus.png);
     font-size:calc(100vw/25);
     animation-name:uranus-shadow;
+    --large-size: calc(100vw/3);
+    --normal-size:calc(100vw/25);
 }
 
 .planet{
@@ -458,7 +466,9 @@ h1{
     background-position: center;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-    transition-timing-function: scale, font-size, 500ms ease;
+    transition-property: all;
+    transition-duration: 500ms;
+    transition-timing-function: ease;
     pointer-events: all;
 }
 
@@ -483,32 +493,26 @@ h1{
 @keyframes earth-shadow{
     0% {
         box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.5);
-        transform: scale(.8);
         /* TOP */ 
     }
     25% {
         box-shadow: inset 2px 0 1px rgba(0, 0, 0, 0.5);
-        transform: scale(1);
         /* LEFT */ 
     }
     50% {
         box-shadow: inset 12px -10px 8px rgba(0, 0, 0, 0.5);
-        transform: scale(1.1);
         /* BOTTOM */ 
     }
     50.01% {
         box-shadow: inset -12px -10px 8px rgba(0, 0, 0, 0.5);
-        transform: scale(1.1);
         /* BOTTOM */ 
     }
     75% {
         box-shadow: inset -2px 0 1px rgba(0, 0, 0, 0.5);
-        transform: scale(1);
         /* RIGHT */ 
     }
     100%{
         box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.5);
-        transform: scale(.8);
         /* TOP */
     }
 }
@@ -516,32 +520,26 @@ h1{
 @keyframes mars-shadow{
     0% {
         box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.5);
-        transform: scale(.8);
         /* TOP */ 
     }
     25% {
         box-shadow: inset 3px 0 2px rgba(0, 0, 0, 0.5);
-        transform: scale(1);
         /* LEFT */ 
     }
     50% {
         box-shadow: inset 16px -13px 12px rgba(0, 0, 0, 0.5);
-        transform: scale(1.1);
         /* BOTTOM */ 
     }
     50.01% {
         box-shadow: inset -16px -13px 12px rgba(0, 0, 0, 0.5);
-        transform: scale(1.1);
         /* BOTTOM */ 
     }
     75% {
         box-shadow: inset -3px 0 2px rgba(0, 0, 0, 0.5);
-        transform: scale(1);
         /* RIGHT */ 
     }
     100%{
         box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.5);
-        transform: scale(.8);
         /* TOP */
     }
 }
@@ -549,32 +547,26 @@ h1{
 @keyframes jupiter-shadow{
     0% {
         box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
-        transform: scale(.8);
         /* TOP */ 
     }
     25% {
         box-shadow: inset 15px 0 10px rgba(0, 0, 0, 0.5);
-        transform: scale(1);
         /* LEFT */ 
     }
     50% {
         box-shadow: inset 70px -60px 50px rgba(0, 0, 0, 0.5);
-        transform: scale(1.1);
         /* BOTTOM */ 
     }
     50.01% {
         box-shadow: inset -70px -60px 50px rgba(0, 0, 0, 0.5);
-        transform: scale(1.1);
         /* BOTTOM */ 
     }
     75% {
         box-shadow: inset -15px 0 10px rgba(0, 0, 0, 0.5);
-        transform: scale(1);
         /* RIGHT */ 
     }
     100%{
         box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
-        transform: scale(.8);
         /* TOP */
     }
 }
@@ -582,32 +574,26 @@ h1{
 @keyframes uranus-shadow{
     0% {
         box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.5);
-        transform: scale(.8);
         /* TOP */ 
     }
     25% {
         box-shadow: inset 14px 0 8px rgba(0, 0, 0, 0.5);
-        transform: scale(1);
         /* LEFT */ 
     }
     50% {
         box-shadow: inset 54px -43px 39px rgba(0, 0, 0, 0.5);
-        transform: scale(1.1);
         /* BOTTOM */ 
     }
     50.01% {
         box-shadow: inset -54px -43px 39px rgba(0, 0, 0, 0.5);
-        transform: scale(1.1);
         /* BOTTOM */ 
     }
     75% {
         box-shadow: inset -14px 0 8px rgba(0, 0, 0, 0.5);
-        transform: scale(1);
         /* RIGHT */ 
     }
     100%{
         box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.5);
-        transform: scale(.8);
         /* TOP */
     }
 }

@@ -25,23 +25,34 @@ const jupiter=document.querySelector("#jupiter .planet");
 const uranus=document.querySelector("#uranus .planet");
 const sun=document.getElementById("sun");
 
-console.log(earth)
-sun.addEventListener("mouseover", sayhi);
+sun.addEventListener("mouseover", hoverSun);
+sun.addEventListener("mouseover", unHoverSun);
 earth.addEventListener("mouseover", hoverEarth);
 earth.addEventListener("mouseout", unHoverEarth);
+mars.addEventListener("mouseover", hoverMars);
+mars.addEventListener("mouseout", unHoverMars);
+jupiter.addEventListener("mouseover", hoverJupiter);
+jupiter.addEventListener("mouseout", unHoverJupiter);
+uranus.addEventListener("mouseover", hoverUranus);
+uranus.addEventListener("mouseout", unHoverUranus);
 
-function sayhi(){
-    console.log("ooga");
+function hoverSun(){
+    
+    return
+}
+
+function unHoverSun(){
+    return
 }
 
 function hoverEarth(){
     const orbit=document.getElementById("earth");
     const container=document.querySelector("#earth .planet-container")
     const planet=earth
-    orbit.style.animationPlayState="paused"
-    container.style.animationPlayState="paused"
-    planet.style.animationPlayState="paused"
-    console.log("pause")
+    orbit.style.animationPlayState="paused";
+    container.style.animationPlayState="paused";
+    planet.style.animationPlayState="paused";
+    planet.style.transform="scale(1.5)"
     return
 }
 
@@ -49,10 +60,76 @@ function unHoverEarth(){
     const orbit=document.getElementById("earth");
     const container=document.querySelector("#earth .planet-container")
     const planet=earth
+    orbit.style.animationPlayState="running";
+    container.style.animationPlayState="running";
+    planet.style.animationPlayState="running";
+    planet.style.transform="scale(1)"
+    return
+}
+
+function hoverMars(){
+    const orbit=document.getElementById("mars");
+    const container=document.querySelector("#mars .planet-container")
+    const planet=mars
+    orbit.style.animationPlayState="paused"
+    container.style.animationPlayState="paused"
+    planet.style.animationPlayState="paused"
+    planet.style.transform="scale(1.5)"
+    return
+}
+
+function unHoverMars(){
+    const orbit=document.getElementById("mars");
+    const container=document.querySelector("#mars .planet-container")
+    const planet=mars
     orbit.style.animationPlayState="running"
     container.style.animationPlayState="running"
     planet.style.animationPlayState="running"
-    console.log("resume")
+    planet.style.transform="scale(1)"
+    return
+}
+
+function hoverJupiter(){
+    const orbit=document.getElementById("jupiter");
+    const container=document.querySelector("#jupiter .planet-container")
+    const planet=jupiter
+    orbit.style.animationPlayState="paused"
+    container.style.animationPlayState="paused"
+    planet.style.animationPlayState="paused"
+    planet.style.transform="scale(1.5)"
+    return
+}
+
+function unHoverJupiter(){
+    const orbit=document.getElementById("jupiter");
+    const container=document.querySelector("#jupiter .planet-container")
+    const planet=jupiter
+    orbit.style.animationPlayState="running"
+    container.style.animationPlayState="running"
+    planet.style.animationPlayState="running"
+    planet.style.transform="scale(1)"
+    return
+}
+
+function hoverUranus(){
+    const orbit=document.getElementById("uranus");
+    const container=document.querySelector("#uranus .planet-container")
+    const planet=uranus
+    orbit.style.animationPlayState="paused"
+    container.style.animationPlayState="paused"
+    planet.style.animationPlayState="paused"
+    planet.style.transform="scale(1.5)"
+    return
+}
+
+function unHoverUranus(){
+    const orbit=document.getElementById("uranus");
+    const container=document.querySelector("#uranus .planet-container")
+    const planet=uranus
+    orbit.style.animationPlayState="running"
+    container.style.animationPlayState="running"
+    planet.style.animationPlayState="running"
+    planet.style.transform="scale(1)"
     return
 }
 
