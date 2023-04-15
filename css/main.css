@@ -753,3 +753,16 @@ give them the class route to make them revolve */
 input#message{
     flex-grow:1;
 }
+
+#contactForm button{
+    display:inline-block;
+    margin-top:2rem;
+    border-radius:.3rem;
+    border:1px solid rgb(33,33,33);
+    padding:.3rem;
+    width:fit-content
+}
+
+#contactForm button:hover{
+    cursor:pointer;
+}
