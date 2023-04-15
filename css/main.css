@@ -11,6 +11,13 @@ body{
     background-color:#000200;
 }
 
+.center{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%, -50%);
+}
+
 /* Hide scroll bars */
 
 body::-webkit-scrollbar, html::-webkit-scrollbar{
@@ -20,13 +27,6 @@ body::-webkit-scrollbar, html::-webkit-scrollbar{
 body, html{
     -ms-overflow-style:none;
     scrollbar-width:none;
-}
-
-.center{
-    position:absolute;
-    left:50%;
-    top:50%;
-    transform:translate(-50%, -50%);
 }
 
 /* init page */
@@ -323,6 +323,7 @@ h1{
     transform:rotateX(75deg);
     box-sizing:border-box;
     transform-style:preserve-3d;
+    vertical-align: baseline;
 }
 
 #sun{
@@ -332,10 +333,7 @@ h1{
     margin-left:calc(-10vw/2);
     background-color: rgb(248, 244, 163);
     box-shadow:0 0 60px rgb(253, 203, 163), 0 0 98px rgb(184, 160, 26);
-    z-index:9990;
-    display:flex;
-    justify-content: center;
-    align-items: center;
+    z-index:0;
     transform:rotateX(-90deg);
     transform-style: preserve-3d;
     box-sizing:border-box;
@@ -472,6 +470,74 @@ h1{
     pointer-events: all;
 }
 
+.planetText{
+    position: absolute;
+    display: block;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    margin-top: -90%;
+    margin-left: 90%;
+    padding-left: 100%;
+    transform-origin: 100% 100%;
+    transform-style: preserve-3d;
+    transition-duration:800ms;
+    transition-timing-function: ease;
+}
+
+dl.planetText:before{
+    position: absolute;
+    content: '';
+    width: 15px;
+    height: 30px;
+    left: 15px;
+    bottom: 0;
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    transform-style: preserve-3d;
+    transform: skew(-45deg, 0deg);
+    box-shadow: inset 1px 1px black;
+}
+
+dl.planetText dt{
+    position: absolute;
+    left: 50px;
+    margin-bottom: 26px;
+    bottom: 30px;
+    color: #FFF;
+    font-size: 10px;
+    text-shadow: 1px 1px 2px black;
+}
+
+dl.planetText dd:after{
+    position: absolute;
+    left: 50px;
+    bottom: 30px;
+    width: 300px;
+    color: #FFF;
+    font-size: 22px;
+    text-shadow: 1px 1px 2px black;
+}
+
+#sun dl.planetText dd:after{
+    content:"Github Profile"
+}
+
+#earth dl.planetText dd:after{
+    content:"Weather App";
+}
+
+#mars dl.planetText dd:after{
+    content:"Admin Dashboard";
+}
+
+#jupiter dl.planetText dd:after{
+    content:"POS Software";
+}
+
+#uranus dl.planetText dd:after{
+    content:"Sarasota Violins";
+}
 @keyframes orbit{
     0%{
         transform:rotateZ(360deg);
