@@ -704,6 +704,7 @@ give them the class route to make them revolve */
     height:250px;
     border-radius:50%;
     padding:1rem;
+    box-shadow: 15px 10px 25px rgb(0 0 0 / 45%);
 }
 
 #gitHubRocket{
