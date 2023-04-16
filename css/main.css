@@ -185,7 +185,7 @@ h1{
     align-items: center;
     width:100vw;
     height:100vh;
-    /* scroll-snap-align: start; */
+    scroll-snap-align: start;
 }
 
 /*# sourceMappingURL=main.css.map */
@@ -737,8 +737,21 @@ give them the class route to make them revolve */
 
 #rocket{
     position:relative;
-    width:100%;
+    width:fit-content;
+    height:fit-content;
     z-index:1;
+    transition:all 6000ms cubic-bezier(.45,0,1,.65);
+    animation-timing-function: linear;
+    animation-duration: 500ms;
+    animation-iteration-count: infinite;
+}
+
+#rocketThrust{
+    display:none;
+    position:absolute;
+    bottom:-30%;
+    left:21%;
+    transform:scale(.8);
 }
 
 #contactForm{

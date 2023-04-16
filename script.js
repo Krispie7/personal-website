@@ -157,3 +157,17 @@ let scrollRef=0;
 window.addEventListener('scroll', function(){
     scrollRef <=0 ? scrollRef++: AOS.refresh();
 })
+
+/* Rocket Launch */
+const rocket=document.getElementById("rocket");
+const rocketThrust=document.getElementById("rocketThrust")
+function rocketLaunch(){
+    rocket.style.position="relative"
+    rocket.style.transform="translate(15vh, -110vh) rotate(8.5deg)"
+    setTimeout(githubRedirect, 6000)
+    rocketThrust.style.display="block"
+}
+
+function githubRedirect(){
+    document.location.href="https://github.com/Krispie7";
+}
