@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Kristian Mendoza</title>
     <link rel="stylesheet" href="css/main.css">
     <script src="script.js" defer></script>
@@ -32,8 +33,8 @@
 
                 <div id="profileContainer">
                     <div id="name">
-                        <h1 class="name">Kristian</h1>
-                        <h1 class="name">Mendoza</h1>
+                        <h1 class="name" data-aos="fade-right">Kristian</h1>
+                        <h1 class="name" data-aos="fade-right">Mendoza</h1>
                     </div>
                     <div id="portaitImage"></div>
                 </div>
@@ -41,8 +42,8 @@
                 <div id="solarSystem"></div>
 
                 <div id="info">
-                    <h1>Self-Taught</h1>
-                    <h1>Web Developer</h1>
+                    <h1 data-aos="fade-right">Self-Taught</h1>
+                    <h1 data-aos="fade-right">Web Developer</h1>
                 </div>
 
             </div>
@@ -68,8 +69,8 @@
                 </div>
 
                 <div id="story">
-                    <h1>A passion Ignited</h1>
-                    <h1>by Video Games</h1>
+                    <h1 data-aos="fade-right">A passion Ignited</h1>
+                    <h1 data-aos="fade-right">by Video Games</h1>
                 </div>
 
                 <div id="nebula"></div>
@@ -142,7 +143,7 @@
         
         <section style="background:linear-gradient(rgb(0, 0, 0), rgb(31, 31, 31))" class="scroll" id="page4">
             <div id="contactGrid">
-                <h1 id="contact">Contact Me</h1>
+                <h1 id="contact" data-aos="fade-right">Contact Me</h1>
 
                 <div id="portraitImage2"></div>
 
@@ -176,5 +177,15 @@
             </div>
         </section>
     </div>
+
+    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script defer>
+        AOS.init({
+            once:false,
+            delay:500,
+            duration:1000
+        });
+    </script>
 </body>
 </html>

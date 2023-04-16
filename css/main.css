@@ -185,7 +185,7 @@ h1{
     align-items: center;
     width:100vw;
     height:100vh;
-    scroll-snap-align: start;
+    /* scroll-snap-align: start; */
 }
 
 /*# sourceMappingURL=main.css.map */

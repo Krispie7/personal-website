@@ -152,3 +152,8 @@ function unHoverUranus(){
     return
 }
 
+let scrollRef=0;
+
+window.addEventListener('scroll', function(){
+    scrollRef <=0 ? scrollRef++: AOS.refresh();
+})
