@@ -15,7 +15,7 @@ function ooga(){
 }
 
 async function completFadeOut(){
-    await new Promise(resolve => setTimeout(resolve, 5000));
+    await new Promise(resolve => setTimeout(resolve, 15000));
     fadeInBackground.style.display="none"
 }
 

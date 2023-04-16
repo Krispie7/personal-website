@@ -52,7 +52,7 @@ body, html{
     height:100vh;
     display: flex;
     z-index: 2;
-    transition: opacity 1s 0s; /* Change to 15s 3s */
+    transition: opacity 15s 3s;
 }
 
 #startButton{
