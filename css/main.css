@@ -771,9 +771,6 @@ give them the class route to make them revolve */
     border:1px solid grey;
 }
 
-input#message{
-    flex-grow:1;
-}
 
 #contactForm button{
     display:inline-block;
