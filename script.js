@@ -169,5 +169,8 @@ function rocketLaunch(){
 }
 
 function githubRedirect(){
-    document.location.href="https://github.com/Krispie7";
+    window.open(
+        "https://github.com/Krispie7",
+        '_blank'
+    );
 }
